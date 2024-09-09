@@ -101,3 +101,8 @@
   );
   pointer-events: none;
 }
+
+.swiper-button-prev.three,
+.swiper-button-next.three {
+  top: 40% !important;
+}
