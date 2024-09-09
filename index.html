@@ -16,7 +16,7 @@
     <title>Tourism - Home</title>
   </head>
   <body>
-    <div class="relative h-screen">
+    <main class="relative h-screen">
       <div
         class="absolute inset-0 bg-cover bg-center"
         style="background-image: url('./assets/hero-section-bg.png')"
@@ -26,7 +26,7 @@
       ></div>
       <!-- Navbar component -->
       <nav id="navbar" class="relative z-20"></nav>
-      <!-- Hero Section -->
+      <!-- Hero section -->
       <section
         class="flex items-center justify-center flex-col h-[75vh] relative z-10 container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16"
       >
@@ -52,16 +52,23 @@
           </div>
         </form>
       </section>
-      <!-- Second Section -->
+      <!-- Second section -->
       <section
-        class="container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16 mt-24"
+        class="container mx-auto px-4 md:px-2 lg:px-10 lg:py-8 xl:px-16 mt-36 md:mt-20"
       >
-        <h2 class="text-2xl font-bold text-black my-10">مجموعة اقسام</h2>
-        <div id="swiperContainer" class="swiper-container hidden">
-          <div class="swiper-wrapper"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+        <h2
+          class="text-3xl font-bold text-black my-6 text-center md:text-start"
+        >
+          مجموعة اقسام
+        </h2>
+        <div
+          id="swiperContainer"
+          class="swiper-container relative overflow-hidden hidden"
+        >
+          <div class="swiper-wrapper pb-20"></div>
+          <div class="swiper-pagination pagination-1"></div>
+          <div class="swiper-button-prev button-prev-1"></div>
+          <div class="swiper-button-next button-next-1"></div>
         </div>
         <div
           id="gridContainer"
@@ -69,9 +76,12 @@
           style="direction: ltr"
         ></div>
       </section>
-    </div>
+      <!-- Third section -->
+      <section id="categoryName"></section>
+    </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="components/navbar/navbar.js"></script>
+    <script src="components/category-name/category-name.js"></script>
     <script>
       const imageArray = [
         {
@@ -111,12 +121,13 @@
         return imageArray
           .map(
             (image) =>
-              `<div class="swiper-slide relative gradient-overlay">
-                  <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
+              `<div class="swiper-slide relative flex items-center justify-center">
+                <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
                   <div class="absolute bottom-5 right-7 z-20">
-                    <h3 class="text-2xl font-semibold text-white">${image.title}<h3/>
+                    <h3 class="text-2xl font-semibold text-white">${image.title}</h3>
                   </div>
-              </div>`
+              </div>
+              `
           )
           .join("");
       }
@@ -126,9 +137,9 @@
           .map(
             (image) =>
               `<div class="${image.span} relative gradient-overlay">
-                  <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
+                  <img src="${image.src}" alt="${image.title}" class="w-full h-full object-cover rounded-xl">
                   <div class="absolute bottom-3 right-3 z-20">
-                    <h3 class="text-2xl font-semibold text-white">${image.title}<h3/>
+                    <h3 class="text-2xl font-bold text-white">${image.title}<h3/>
                   </div>
               </div>`
           )
@@ -141,8 +152,8 @@
         if (window.innerWidth < 768) {
           swiperContainer.innerHTML = `<div class="swiper-wrapper">${loadImagesForSwiper()}</div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev w-14 h-14 text-[#ED3654] bg-white rounded-full"></div>
-            <div class="swiper-button-next w-14 h-14 text-[#ED3654] bg-white rounded-full"></div>`;
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>`;
           swiperContainer.classList.remove("hidden");
           gridContainer.classList.add("hidden");
           new Swiper(".swiper-container", {
