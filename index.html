@@ -78,6 +78,57 @@
       </section>
       <!-- Third section -->
       <section id="categoryName"></section>
+      <!-- Fourth section -->
+      <section
+        class="container mx-auto px-4 py-0 md:py-5 md:px-2 lg:px-10 xl:px-16"
+      >
+        <h2
+          class="text-3xl font-bold text-black mt-3 mb-6 md:mt-6 text-center md:text-start"
+        >
+          المدونة
+        </h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div class="col-span-1">
+            <img
+              src="./assets/blog-1.png"
+              alt="blog-image"
+              class="object-cover rounded-xl w-full h-[250px]"
+            />
+            <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
+            <p class="text-[#646464] w-full md:w-11/12">
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
+              في......
+            </p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="./assets/blog-2.png"
+              alt="blog-image"
+              class="object-cover rounded-xl w-full h-[250px]"
+            />
+            <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
+            <p class="text-[#646464] w-full md:w-11/12">
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
+              في......
+            </p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="./assets/blog-3.png"
+              alt="blog-image"
+              class="object-cover rounded-xl w-full h-[250px]"
+            />
+            <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
+            <p class="text-[#646464] w-full md:w-11/12">
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
+              في......
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="components/navbar/navbar.js"></script>
@@ -121,7 +172,7 @@
         return imageArray
           .map(
             (image) =>
-              `<div class="swiper-slide relative flex items-center justify-center">
+              `<div class="swiper-slide gradient-overlay relative flex items-center justify-center">
                 <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
                   <div class="absolute bottom-5 right-7 z-20">
                     <h3 class="text-2xl font-semibold text-white">${image.title}</h3>

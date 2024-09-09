@@ -35,6 +35,12 @@
   padding-bottom: 65px;
 }
 
+@media (min-width: 768px) {
+  .swiper-wrapper {
+    padding-bottom: 0 !important;
+  }
+}
+
 .swiper-slide {
   height: 350px;
   display: flex;
