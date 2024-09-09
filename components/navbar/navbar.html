@@ -1,0 +1,124 @@
+<div
+  class="flex items-center justify-between container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16"
+>
+  <!-- Logo -->
+  <div class="logo">
+    <a
+      href="index.html"
+      class="text-2xl lg:text-3xl font-bold uppercase text-white"
+      >tourismaic</a
+    >
+  </div>
+  <!-- Mobile Menu Button -->
+  <div class="md:hidden">
+    <button
+      id="menu-button"
+      class="bg-[#4CCAF2] text-white text-2xl px-2 rounded"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <!-- Nav Links -->
+  <ul
+    id="nav-links"
+    class="hidden md:flex items-center md:space-x-3 xl:space-x-6"
+  >
+    <li>
+      <a
+        href="index.html"
+        class="mx-3 xl:mx-6 text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >الرئيسية</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >انشطة سياحية</a
+      >
+    </li>
+    <li class="relative group">
+      <a
+        href="#"
+        class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >المدونات<i class="fa-solid fa-chevron-down fa-sm mr-2"></i
+      ></a>
+      <div
+        id="dropdown"
+        class="absolute hidden bg-white p-3 rounded shadow-lg group-hover:flex flex-col space-y-2 transition-opacity duration-200 w-28"
+      >
+        <a
+          href="#"
+          class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+          >اختيار 1</a
+        >
+        <a
+          href="#"
+          class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+          >اختيار 2</a
+        >
+        <a
+          href="#"
+          class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+          >اختيار 3</a
+        >
+      </div>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >مرافق الفنادق</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >الصور</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+        >قسم جديد</a
+      >
+    </li>
+  </ul>
+  <!-- Contact Button -->
+  <div class="hidden md:block">
+    <a
+      href="#"
+      class="text-base font-semibold lg:font-bold px-4 py-1 lg:px-8 xl:px-12 lg:py-2 rounded-full bg-[#4CCAF2] hover:bg-[#44b6d9] transition duration-200 text-white"
+      >اتصل بنا</a
+    >
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 hidden pt-20 pr-10 flex-col space-y-4 text-black flex"
+  style="
+    background-image: url('/assets/mobile-navbar-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
+  <button
+    id="close-menu"
+    class="absolute px-[15px] py-2 top-5 left-5 text-2xl border border-black"
+    style="border-radius: 50%"
+  >
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <a href="index.html" class="w-fit text-2xl font-semimbold">الرئيسية</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">انشطة سياحية</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">المدونات</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">مرافق الفنادق</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">الصور</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">قسم جديد</a>
+  <a href="#" class="w-fit text-2xl font-semimbold">اتصل بنا</a>
+</div>
