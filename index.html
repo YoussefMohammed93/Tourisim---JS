@@ -8,11 +8,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Tourism - Home</title>
   </head>
   <body>
-    <section class="relative h-screen">
+    <div class="relative h-screen">
       <div
         class="absolute inset-0 bg-cover bg-center"
         style="background-image: url('./assets/hero-section-bg.png')"
@@ -22,7 +26,8 @@
       ></div>
       <!-- Navbar component -->
       <nav id="navbar" class="relative z-20"></nav>
-      <div
+      <!-- Hero Section -->
+      <section
         class="flex items-center justify-center flex-col h-[75vh] relative z-10 container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16"
       >
         <h1
@@ -46,8 +51,121 @@
             </button>
           </div>
         </form>
-      </div>
-    </section>
+      </section>
+      <!-- Second Section -->
+      <section
+        class="container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16 mt-24"
+      >
+        <h2 class="text-2xl font-bold text-black my-10">مجموعة اقسام</h2>
+        <div id="swiperContainer" class="swiper-container hidden">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div
+          id="gridContainer"
+          class="grid grid-cols-4 grid-rows-3 gap-4 hidden"
+          style="direction: ltr"
+        ></div>
+      </section>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="components/navbar/navbar.js"></script>
+    <script>
+      const imageArray = [
+        {
+          src: "./assets/image1.png",
+          span: "col-span-2",
+          title: "عنوان القسم",
+        },
+        { src: "./assets/image2.png", span: "", title: "عنوان القسم" },
+        {
+          src: "./assets/image3.png",
+          span: "row-span-2 col-start-4",
+          title: "عنوان القسم",
+        },
+        {
+          src: "./assets/image4.png",
+          span: "row-span-2 col-start-1 row-start-2",
+          title: "عنوان القسم",
+        },
+        {
+          src: "./assets/image5.png",
+          span: "row-span-2 col-start-2 row-start-2",
+          title: "عنوان القسم",
+        },
+        {
+          src: "./assets/image6.png",
+          span: "col-start-3 row-start-2",
+          title: "عنوان القسم",
+        },
+        {
+          src: "./assets/image7.png",
+          span: "col-span-2 col-start-3 row-start-3",
+          title: "عنوان القسم",
+        },
+      ];
+
+      function loadImagesForSwiper() {
+        return imageArray
+          .map(
+            (image) =>
+              `<div class="swiper-slide relative gradient-overlay">
+                  <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
+                  <div class="absolute bottom-5 right-7 z-20">
+                    <h3 class="text-2xl font-semibold text-white">${image.title}<h3/>
+                  </div>
+              </div>`
+          )
+          .join("");
+      }
+
+      function loadImagesForGrid() {
+        return imageArray
+          .map(
+            (image) =>
+              `<div class="${image.span} relative gradient-overlay">
+                  <img src="${image.src}" alt="" class="w-full h-full object-cover rounded-md">
+                  <div class="absolute bottom-3 right-3 z-20">
+                    <h3 class="text-2xl font-semibold text-white">${image.title}<h3/>
+                  </div>
+              </div>`
+          )
+          .join("");
+      }
+
+      function updateLayout() {
+        const swiperContainer = document.getElementById("swiperContainer");
+        const gridContainer = document.getElementById("gridContainer");
+        if (window.innerWidth < 768) {
+          swiperContainer.innerHTML = `<div class="swiper-wrapper">${loadImagesForSwiper()}</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev w-14 h-14 text-[#ED3654] bg-white rounded-full"></div>
+            <div class="swiper-button-next w-14 h-14 text-[#ED3654] bg-white rounded-full"></div>`;
+          swiperContainer.classList.remove("hidden");
+          gridContainer.classList.add("hidden");
+          new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        } else {
+          gridContainer.innerHTML = loadImagesForGrid();
+          gridContainer.classList.remove("hidden");
+          swiperContainer.classList.add("hidden");
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", updateLayout);
+      window.addEventListener("resize", updateLayout);
+    </script>
   </body>
 </html>
