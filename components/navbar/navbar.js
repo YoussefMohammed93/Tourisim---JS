@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { href: "#", text: "انشطة سياحية" },
         { href: "#", text: "المدونات", hasDropdown: true },
         { href: "#", text: "مرافق الفنادق" },
-        { href: "#", text: "الصور" },
+        { href: "/images.html", text: "الصور" },
         { href: "#", text: "قسم جديد" },
       ];
 
