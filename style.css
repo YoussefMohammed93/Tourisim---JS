@@ -111,6 +111,10 @@
   height: 420px !important;
 }
 
+.swiper-slide.five {
+  height: 250px !important;
+}
+
 .swiper-wrapper.four {
   padding-bottom: 50px !important;
 }

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.forEach((link) => {
         let listItem = document.createElement("li");
         listItem.innerHTML = `
-          <a href="${link.href}" class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150">${link.text}</a>
+          <a href="${link.href}" class="text-base font-semibold lg:font-bold lg:text-lg md:mx-2 xl:mx-4 text-white hover:text-[#d8d7d7] transition-all duration-150">${link.text}</a>
         `;
 
         if (link.hasDropdown) {
