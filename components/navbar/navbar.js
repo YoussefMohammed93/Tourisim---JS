@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { href: "#", text: "انشطة سياحية" },
         { href: "#", text: "المدونات", hasDropdown: true },
         { href: "#", text: "مرافق الفنادق" },
-        { href: "/images.html", text: "الصور" },
+        { href: "images.html", text: "الصور" },
         { href: "#", text: "قسم جديد" },
       ];
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       let contactButton = document.createElement("a");
-      contactButton.href = "#";
+      contactButton.href = "contact.html";
       contactButton.className = "w-fit text-2xl font-semibold";
       contactButton.textContent = "اتصل بنا";
       mobileMenuContainer.appendChild(contactButton);

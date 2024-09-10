@@ -8,41 +8,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="style.css" />
     <title>Tourism - Images</title>
   </head>
   <body>
     <!-- Navbar component -->
     <nav id="navbar" class="w-full absolute z-50"></nav>
-    <div
-      class="bg-cover bg-center h-[50vh] md:h-[60vh]"
-      style="background-image: url('./assets/hero-section-bg.png')"
-    >
-      <div
-        class="absolute left-1/2 top-[35%] z-30"
-        style="transform: translate(-50%, -50%)"
-      >
-        <div>
-          <h1
-            class="text-4xl font-black text-white text-center main-title images relative z-40"
-          >
-            الصور
-          </h1>
-        </div>
-        <div class="breadcrumb mt-5">
-          <a href="index.html" class="text-xl text-white mx-3">الرئيسية</a>
-          <span class="text-xl text-white">|</span>
-          <a href="images.html" class="text-xl text-white mx-3">الصور</a>
-        </div>
-      </div>
-    </div>
-    <div
-      class="absolute top-0 left-0 w-full h-[70vh] bg-gradient-to-b from-[#000000cf] to-transparent"
-    ></div>
+    <header id="header"></header>
     <main class="mt-16 sm:mt-24 relative z-10">
       <section
         class="container mx-auto px-4 sm:px-4 md:py-0 md:px-4 lg:px-10 xl:px-16 mb-10"
@@ -142,6 +114,7 @@
       <footer id="footer"></footer>
       <div id="floatBtns"></div>
     </main>
+    <script src="components/header/header.js"></script>
     <script src="components/navbar/navbar.js"></script>
     <script src="components/banner/banner.js"></script>
     <script src="components/footer/footer.js"></script>
