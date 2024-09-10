@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return tourismImages
           .map(
             (image) =>
-              `<div class="swiper-slide relative gradient-overlay">
+              `<a href="#" class="swiper-slide relative gradient-overlay">
                 <img src="${image.src}" alt="${image.title}" class="w-full h-full object-cover rounded-xl">
                 <div class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold">${image.title}</div>
-              </div>`
+              </a>`
           )
           .join("");
       }

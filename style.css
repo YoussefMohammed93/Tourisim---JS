@@ -42,7 +42,7 @@
 }
 
 .swiper-slide {
-  height: 350px;
+  height: 385px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,4 +105,12 @@
 .swiper-button-prev.three,
 .swiper-button-next.three {
   top: 40% !important;
+}
+
+.swiper-slide.four {
+  height: 420px !important;
+}
+
+.swiper-wrapper.four {
+  padding-bottom: 50px !important;
 }
