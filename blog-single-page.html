@@ -8,143 +8,687 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tourism - Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tourism - Blog Sub Section</title>
   </head>
   <body>
-    <nav id="navbar" class="w-full absolute z-50"></nav>
-    <div>
-      <div class="h-[50vh] md:h-[60vh] bg-white">
+    <main>
+      <!-- Header -->
+      <header class="header absolute top-0 left-0 w-full z-20">
         <div
-          class="absolute left-1/2 top-[35%] z-30 w-full"
-          style="transform: translate(-50%, -50%)"
+          class="flex items-center justify-between container mx-auto px-4 py-4 md:px-2 lg:px-10 lg:py-8 xl:px-16"
         >
-          <div class="container px-4">
-            <h1
-              class="text-4xl font-black text-[#144554] text-center main-title images relative z-40"
+          <div class="logo">
+            <a
+              href="index.html"
+              class="text-2xl lg:text-3xl font-bold uppercase text-[#144554] md:text-white"
+              >tour<span class="text-[#4ccaf2] md:text-white">ismaic</span></a
             >
-              عنوان التدوينة يعرض هنا بشكل كامل
-            </h1>
           </div>
-          <div class="breadcrumb container px-4 mt-5 w-full text-center">
-            <a href="index.html" class="text-xl text-[#144554] mx-3"
-              >الرئيسية</a
+          <div class="md:hidden">
+            <button
+              id="menu-button"
+              class="bg-[#4CCAF2] text-white text-2xl px-2 rounded"
             >
-            <span class="text-xl text-[#144554]">|</span>
-            <a href="images.html" class="main text-xl text-[#144554] mx-3"
-              >المدونات</a
-            >
-            <span class="text-xl text-[#144554]">|</span>
-            <a href="images.html" class="main text-xl text-[#144554] mx-3"
-              >قسم فرعي
-            </a>
-            <span class="text-xl text-[#144554]">|</span>
-            <a href="images.html" class="main text-xl text-[#144554] mx-3">
-              عنوان التدوينة يعرض هنا بشكل كامل</a
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul class="hidden md:flex items-center space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="text-base font-semibold lg:font-bold lg:text-lg ml-4 text-white hover:text-[#d8d7d7] transition-all duration-150"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+                >انشطة سياحية</a
+              >
+            </li>
+            <li class="relative group">
+              <a
+                href="blogs.html"
+                class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+              >
+                المدونات <i class="fa-solid fa-chevron-down fa-sm mr-2"></i>
+              </a>
+              <!-- Dropdown Menu -->
+              <div
+                class="absolute origin-top scale-y-0 group-hover:scale-y-100 transform transition-transform duration-300 flex flex-col bg-white p-3 rounded shadow-lg space-y-2 w-28"
+              >
+                <a
+                  href="#"
+                  class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+                  >اختيار 1</a
+                >
+                <a
+                  href="#"
+                  class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+                  >اختيار 2</a
+                >
+                <a
+                  href="#"
+                  class="text-center text-black font-semibold hover:text-[#4CCAF2] transition-all duration-200"
+                  >اختيار 3</a
+                >
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+                >مرافق الفنادق</a
+              >
+            </li>
+            <li>
+              <a
+                href="images.html"
+                class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+                >الصور</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base font-semibold lg:font-bold lg:text-lg text-white hover:text-[#d8d7d7] transition-all duration-150"
+                >قسم جديد</a
+              >
+            </li>
+          </ul>
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="text-base font-semibold lg:font-bold px-4 py-1 lg:px-8 xl:px-12 lg:py-2 rounded-full bg-[#4CCAF2] hover:bg-[#44b6d9] transition duration-200 text-white"
+              >اتصل بنا</a
             >
           </div>
         </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="fixed z-[60] inset-0 transform translate-x-full transition-transform duration-300 flex flex-col space-y-4 pt-20 pr-10 text-black bg-white"
+          style="
+            background-image: url('/assets/images/mobile-navbar-bg.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          "
+        >
+          <button
+            id="close-menu"
+            class="absolute px-[15px] py-2 top-5 left-5 text-2xl border border-black rounded-full"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <a href="index.html" class="w-fit text-2xl font-semibold">الرئيسية</a>
+          <a href="#" class="w-fit text-2xl font-semibold">انشطة سياحية</a>
+          <a href="blogs.html" class="w-fit text-2xl font-semibold">المدونات</a>
+          <a href="#" class="w-fit text-2xl font-semibold">مرافق الفنادق</a>
+          <a href="images.html" class="w-fit text-2xl font-semibold">الصور</a>
+          <a href="#" class="w-fit text-2xl font-semibold">قسم جديد</a>
+          <a href="contact.html" class="w-fit text-2xl font-semibold"
+            >اتصل بنا</a
+          >
+        </div>
+      </header>
+      <!-- Background Layout -->
+      <div>
+        <div
+          class="bg-single-page bg-cover bg-center h-[40vh] md:h-[60vh] bg-white md:bg-[url('./assets/images/hero-section-bg.png')]"
+        >
+          <div
+            class="for-zIndex absolute left-1/2 top-[35%] z-30 w-full"
+            style="transform: translate(-50%, -100%)"
+          >
+            <div class="container mx-auto px-4">
+              <h1
+                class="w-full text-4xl font-black text-[#144554] md:text-white text-center main-title flex items-center justify-center images relative z-40"
+              >
+                عنوان التدوينة يعرض هنا بشكل كامل
+              </h1>
+            </div>
+            <div class="breadcrumb mt-5 w-full text-center">
+              <a
+                href="index.html"
+                class="text-xl text-[#144554] md:text-white mx-3"
+                >الرئيسية</a
+              >
+              <span class="text-xl text-[#144554] md:text-white">|</span>
+              <a
+                href="blogs.html"
+                class="main text-xl text-[#144554] md:text-white mx-3"
+                >المدونات</a
+              >
+              <span class="text-xl text-[#144554] md:text-white">|</span>
+              <a
+                href="blog-sub-section.html"
+                class="main text-xl text-[#144554] md:text-white mx-3"
+                >قسم فرعي</a
+              >
+              <span class="text-xl text-[#144554] md:text-white">|</span>
+              <a
+                href="blog-single-page.html"
+                class="main text-xl text-[#144554] md:text-white mx-3"
+                >عنوان التدوينة يعرض هنا بشكل كامل</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden md:block absolute top-0 left-0 w-full h-[50vh] md:h-[70vh] bg-gradient-to-b from-[#000000cf] to-transparent"
+        ></div>
       </div>
-    </div>
-
-    <main class="mt-10 sm:mt-20">
-      <div
-        class="container mx-auto px-4 sm:px-4 md:py-0 md:px-4 lg:px-10 xl:px-16 mb-10"
-      >
-        <div></div>
+      <!-- Main Blog Section -->
+      <section class="blog-single-page-section">
+        <div>
+          <div class="w-full flex flex-col">
+            <div
+              class="blog-image relative h-[350px] md:h-auto md:flex md:justify-center md:py-16"
+            >
+              <img
+                src="./assets/images/bg-blog.png"
+                alt="blog"
+                class="w-full md:w-3/4 h-[250px] md:h-[300px] object-cover md:rounded-xl"
+              />
+              <div
+                class="md:hidden relative bottom-16 p-3 pt-5 bg-white shadow rounded-2xl mx-4 flex flex-col items-start"
+              >
+                <h2
+                  class="bg-[#4ccaf2] text-white text-lg font-semibold px-3 py-1 rounded-full"
+                >
+                  قسم التدوينة
+                </h2>
+                <p
+                  class="text-[#969696] text-lg my-3 pr-[6px] border-t border-b w-3/4 py-2"
+                >
+                  يناير 23, 2023
+                </p>
+                <div class="flex items-center my-3">
+                  <i
+                    class="fa-regular fa-user fa-xl pr-[6px] text-[#4ccaf2]"
+                  ></i>
+                  <p class="text-[#969696] pr-2 text-lg">بواسطة : احمد محمود</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-16"
+            >
+              <div class="hidden md:block relative">
+                <div
+                  class="absolute right-24 lg:right-32 xl:right-48 flex items-center"
+                >
+                  <h2
+                    class="bg-[#4ccaf2] text-white text-lg font-semibold px-3 py-1 rounded-full"
+                  >
+                    قسم التدوينة
+                  </h2>
+                  <p class="text-[#969696] text-lg my-3 pr-3">يناير 23, 2023</p>
+                  <div class="flex items-center my-3">
+                    <i class="fa-regular fa-user fa-lg pr-3 text-[#4ccaf2]"></i>
+                    <p class="text-[#969696] pr-2 text-lg">
+                      بواسطة : احمد محمود
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pt-16 md:pt-20 w-full flex items-center justify-center"
+              >
+                <p class="text-center md:w-3/4 font-semibold">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                </p>
+              </div>
+              <div
+                class="hidden md:flex pt-16 md:pt-20 w-full items-center justify-center"
+              >
+                <p class="text-center md:w-3/4 font-semibold">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                </p>
+              </div>
+              <div
+                class="flex pt-16 md:pt-20 w-full items-center justify-center"
+              >
+                <p
+                  class="text-center md:w-3/4 bg-white shadow-lg p-4 rounded-2xl font-semibold"
+                >
+                  <i class="fa-solid fa-quote-left fa-xl m-2"></i>
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                  إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                  استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                  <i class="fa-solid fa-quote-left fa-xl m-2"></i>
+                </p>
+              </div>
+              <div
+                class="flex flex-col pt-16 md:pt-20 w-full items-center justify-center"
+              >
+                <p class="text-start md:w-3/4 font-semibold">
+                  <i class="fa-solid fa-chevron-left fa-lg pl-3"></i>
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ.
+                </p>
+                <p class="text-start md:w-3/4 py-10 font-semibold">
+                  <i class="fa-solid fa-chevron-left fa-lg pl-3"></i>
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ.
+                </p>
+                <p class="text-start md:w-3/4 font-semibold">
+                  <i class="fa-solid fa-chevron-left fa-lg pl-3"></i>
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ.
+                </p>
+                <p class="text-start md:w-3/4 pt-10 font-semibold">
+                  <i class="fa-solid fa-chevron-left fa-lg pl-3"></i>
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                  إيبسوم لأنها تعطي توزيعاَ.
+                </p>
+              </div>
+              <div class="pt-16">
+                <div class="flex justify-center md:hidden">
+                  <div
+                    class="tabs flex items-center border border-[#4CCAF2] rounded-full p-2"
+                  >
+                    <button
+                      id="tab1"
+                      class="tab-button bg-[#4CCAF2] transition-all duration-200 text-white text-lg font-semibold rounded-full px-5 py-2 mx-1"
+                      onclick="switchTab('tab1')"
+                    >
+                      التعليقات
+                    </button>
+                    <button
+                      id="tab2"
+                      class="tab-button text-[#555] duration-200 transition-all text-lg font-semibold rounded-full px-5 py-2 mx-1"
+                      onclick="switchTab('tab2')"
+                    >
+                      اترك تعليق
+                    </button>
+                  </div>
+                </div>
+                <div class="hidden md:block">
+                  <h1 class="text-2xl font-bold">التعليقات</h1>
+                </div>
+                <div id="content1" class="tab-content mt-10 md:block">
+                  <div
+                    class="flex flex-col items-start shadow rounded-xl p-4 bg-white"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="./assets/images/person.png"
+                        alt="user"
+                        class="object-cover rounded-full"
+                      />
+                      <div class="flex flex-col pr-4">
+                        <p class="text-[#6E6B7B] font-semibold text-lg">
+                          AHMED ADEL
+                        </p>
+                        <p class="text-[#6E6B7B]">15 أغسطس 2024</p>
+                      </div>
+                    </div>
+                    <div class="w-full flex justify-center pt-5">
+                      <p class="w-[65%] md:w-[91%] text-[#6E6B7B]">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص
+                      </p>
+                    </div>
+                    <div class="w-full flex justify-center pt-4">
+                      <div
+                        class="flex items-center w-[65%] md:w-[91%] text-[#6385C1]"
+                      >
+                        <p class="text-lg pl-2">رد</p>
+                        <i class="fa-solid fa-reply pt-1"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="content2" class="tab-content mt-10 hidden md:block">
+                  <div class="md:shadow md:p-6 md:rounded-xl">
+                    <form action="#">
+                      <div class="flex flex-col space-y-4">
+                        <label for="name" class="text-xl font-semibold"
+                          >الاسم</label
+                        >
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="EX : AHMED ADEL"
+                          class="form-input rounded-lg focus:outline-none p-2 border-2 border-gray-300 focus:border-[#4CCAF2]"
+                        />
+                        <label for="email" class="text-xl font-semibold"
+                          >البريد الإلكتروني</label
+                        >
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="EX : admin@domain.com"
+                          class="form-input rounded-lg focus:outline-none p-2 border-2 border-gray-300 focus:border-[#4CCAF2]"
+                        />
+                        <label for="title" class="text-xl font-semibold"
+                          >العنوان</label
+                        >
+                        <textarea
+                          placeholder="EX : االعنوان هنا "
+                          id="title"
+                          class="form-input rounded-lg focus:outline-none p-2 border-2 border-gray-300 focus:border-[#4CCAF2] resize-none"
+                          rows="1"
+                        ></textarea>
+                        <label for="msg" class="text-xl font-semibold"
+                          >الرسالة</label
+                        >
+                        <textarea
+                          placeholder="الرسالة"
+                          id="msg"
+                          class="form-input rounded-lg focus:outline-none p-2 border-2 border-gray-300 focus:border-[#4CCAF2] resize-none"
+                          rows="5"
+                        ></textarea>
+                        <button
+                          type="submit"
+                          class="w-[80px] h-9 text-center flex items-center justify-center text-lg font-semibold bg-[#6385C1] hover:bg-[#5775a9] transition-all duration-200 text-white rounded-full p-2"
+                        >
+                          رد
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2
+                  class="text-3xl font-bold text-black text-center py-16 md:text-start"
+                >
+                  تدوينات مشابهه
+                </h2>
+                <div class="swiper-container internal-trips-swiper">
+                  <div class="swiper-wrapper four">
+                    <a
+                      href="#"
+                      class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+                    >
+                      <img
+                        src="./assets/images/blog-1.png"
+                        alt="blog-image"
+                        class="object-cover w-full h-[250px] rounded-t-xl"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-2xl font-bold my-3">
+                          عنوان التدوينة يعرض هنا
+                        </h3>
+                        <p class="text-[#646464] w-full md:w-11/12">
+                          هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                          لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                          للنص أو شكل توضع الفقرات في......
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+                    >
+                      <img
+                        src="./assets/images/image-2.png"
+                        alt="blog-image"
+                        class="object-cover w-full h-[250px] rounded-t-xl"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-2xl font-bold my-3">
+                          عنوان التدوينة يعرض هنا
+                        </h3>
+                        <p class="text-[#646464] w-full md:w-11/12">
+                          هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                          لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                          للنص أو شكل توضع الفقرات في......
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+                    >
+                      <img
+                        src="./assets/images/blog-3.png"
+                        alt="blog-image"
+                        class="object-cover w-full h-[250px] rounded-t-xl"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-2xl font-bold my-3">
+                          عنوان التدوينة يعرض هنا
+                        </h3>
+                        <p class="text-[#646464] w-full md:w-11/12">
+                          هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                          لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                          للنص أو شكل توضع الفقرات في......
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+                    >
+                      <img
+                        src="./assets/images/blog-2.png"
+                        alt="blog-image"
+                        class="object-cover w-full h-[250px] rounded-t-xl"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-2xl font-bold my-3">
+                          عنوان التدوينة يعرض هنا
+                        </h3>
+                        <p class="text-[#646464] w-full md:w-11/12">
+                          هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                          لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                          للنص أو شكل توضع الفقرات في......
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-pagination four"></div>
+                  <div class="swiper-button-prev hidden md:flex"></div>
+                  <div class="swiper-button-next hidden md:flex"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <div
+          class="w-full h-[60vh] md:h-[45vh] bg-center bg-cover bg-no-repeat flex items-center justify-center"
+          style="background-image: url('./assets/images/footer-bg.png')"
+        >
+          <div class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16">
+            <div class="text-center">
+              <h1
+                class="text-5xl md:text-7xl font-black uppercase text-slate-800"
+                style="letter-spacing: 5px"
+              >
+                tour<span class="text-[#4CCAF2]">ismaic</span>
+              </h1>
+            </div>
+            <div class="flex items-center justify-center pt-10">
+              <ul class="flex items-center flex-col md:flex-row">
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="index.html"
+                  >
+                    الرئيسية
+                  </a>
+                </li>
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="index.html"
+                  >
+                    انشطة سياحية
+                  </a>
+                </li>
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="blogs.html"
+                  >
+                    المدونات
+                  </a>
+                </li>
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="index.html"
+                  >
+                    مرافق الفنادق
+                  </a>
+                </li>
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="images.html"
+                  >
+                    الصور
+                  </a>
+                </li>
+                <li class="mx-3 py-2 md:py-0">
+                  <a
+                    class="text-lg font-semibold lg:font-bold"
+                    href="index.html"
+                  >
+                    قسم جديد
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-center pt-5 hidden md:block">
+              <p class="text-lg font-semibold">
+                جميع الحقوق محفوظة لموقع شركة تورزماتك © 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Float buttons -->
+      <div>
+        <div class="fixed bottom-4 left-4 flex z-40 flex-col gap-4">
+          <a
+            href="https://wa.me/+201096030194"
+            class="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-200"
+          >
+            <i class="fab fa-whatsapp fa-2xl"></i>
+          </a>
+          <a
+            href="tel:+201096030194"
+            class="flex items-center justify-center w-16 h-16 bg-purple-500 text-white rounded-full shadow-lg hover:bg-purple-600 transition-all duration-200"
+          >
+            <i class="fa-solid fa-phone fa-xl fa-flip-horizontal"></i>
+          </a>
+        </div>
       </div>
-      <footer id="footer"></footer>
-      <div id="floatBtns"></div>
     </main>
-    <script src="components/navbar/navbar.js"></script>
-    <script src="components/footer/footer.js"></script>
-    <script src="components/banner/banner.js"></script>
-    <script src="components/float-buttons/float-buttons.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      let currentPage = 1;
-      let itemsPerPage = 9;
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("mobile-menu")
+            .classList.remove("translate-x-full");
 
-      function determineItemsPerPage() {
-        if (window.innerWidth <= 768) {
-          itemsPerPage = 5;
-        } else {
-          itemsPerPage = 9;
-        }
+          document.querySelector(".for-zIndex").classList.remove("z-30");
+        });
+
+      document
+        .getElementById("close-menu")
+        .addEventListener("click", function () {
+          document
+            .getElementById("mobile-menu")
+            .classList.add("translate-x-full");
+
+          document.querySelector(".for-zIndex").classList.add("z-30");
+        });
+
+      function switchTab(tabId) {
+        const tabs = document.querySelectorAll(".tab-button");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+          if (tab.id === tabId) {
+            tab.classList.add("bg-[#4CCAF2]", "text-white");
+            tab.classList.remove("text-[#555]");
+          } else {
+            tab.classList.remove("bg-[#4CCAF2]", "text-white");
+            tab.classList.add("text-[#555]");
+          }
+        });
+
+        contents.forEach((content) => {
+          if (content.id === "content" + tabId[tabId.length - 1]) {
+            content.classList.remove("hidden");
+          } else {
+            content.classList.add("hidden");
+          }
+        });
       }
 
-      function setupPagination(grid) {
-        determineItemsPerPage();
-
-        const items = grid.children;
-        const totalPages = Math.ceil(items.length / itemsPerPage);
-        const paginationContainer = document.getElementById("pagination");
-        paginationContainer.innerHTML = "";
-
-        const prevButton = document.createElement("button");
-        prevButton.innerHTML = "&lt;&lt;";
-        prevButton.disabled = currentPage === 1;
-        prevButton.onclick = () => changePage(-1, grid);
-        paginationContainer.appendChild(prevButton);
-
-        for (let i = 1; i <= totalPages; i++) {
-          const pageButton = document.createElement("button");
-          pageButton.innerHTML = i;
-          pageButton.className = `mx-1 px-3 py-1 ${
-            i === currentPage ? "border-2 border-sky-500" : "border-2"
-          }`;
-          pageButton.onclick = () => goToPage(i, grid);
-          paginationContainer.appendChild(pageButton);
-        }
-
-        const nextButton = document.createElement("button");
-        nextButton.innerHTML = "&gt;&gt;";
-        nextButton.disabled = currentPage === totalPages;
-        nextButton.className = "text-lg border-2 px-2 mx-1";
-        prevButton.className = "text-lg border-2 px-2 mx-1";
-        nextButton.onclick = () => changePage(1, grid);
-        paginationContainer.appendChild(nextButton);
-      }
-
-      function goToPage(page, grid) {
-        currentPage = page;
-        displayPage(grid, currentPage);
-        setupPagination(grid);
-      }
-
-      function changePage(direction, grid) {
-        const totalPages = Math.ceil(grid.children.length / itemsPerPage);
-        if (direction === -1 && currentPage > 1) {
-          goToPage(currentPage - 1, grid);
-        } else if (direction === 1 && currentPage < totalPages) {
-          goToPage(currentPage + 1, grid);
-        }
-      }
-
-      function displayPage(grid, page) {
-        const items = grid.children;
-        for (let i = 0; i < items.length; i++) {
-          items[i].style.display =
-            i >= (page - 1) * itemsPerPage && i < page * itemsPerPage
-              ? "block"
-              : "none";
-        }
-      }
-
-      window.addEventListener("resize", () => {
-        const grid = document.getElementById("grid");
-        if (grid) {
-          determineItemsPerPage();
-          goToPage(1, grid);
-        }
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const grid = document.getElementById("grid");
-        if (grid) {
-          determineItemsPerPage();
-          displayPage(grid, currentPage);
-          setupPagination(grid);
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".internal-trips-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            },
+          },
+        });
       });
     </script>
   </body>
