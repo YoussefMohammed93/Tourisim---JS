@@ -60,5 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".breadcrumb").appendChild(newSpan);
         document.querySelector(".breadcrumb").appendChild(newLink);
       }
+      
     });
 });

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tourism - Blog</title>
+  </head>
+  <body>
+    <nav id="navbar" class="w-full absolute z-50"></nav>
+    <div>
+      <div class="h-[50vh] md:h-[60vh] bg-white">
+        <div
+          class="absolute left-1/2 top-[35%] z-30 w-full"
+          style="transform: translate(-50%, -50%)"
+        >
+          <div class="container px-4">
+            <h1
+              class="text-4xl font-black text-[#144554] text-center main-title images relative z-40"
+            >
+              عنوان التدوينة يعرض هنا بشكل كامل
+            </h1>
+          </div>
+          <div class="breadcrumb container px-4 mt-5 w-full text-center">
+            <a href="index.html" class="text-xl text-[#144554] mx-3"
+              >الرئيسية</a
+            >
+            <span class="text-xl text-[#144554]">|</span>
+            <a href="images.html" class="main text-xl text-[#144554] mx-3"
+              >المدونات</a
+            >
+            <span class="text-xl text-[#144554]">|</span>
+            <a href="images.html" class="main text-xl text-[#144554] mx-3"
+              >قسم فرعي
+            </a>
+            <span class="text-xl text-[#144554]">|</span>
+            <a href="images.html" class="main text-xl text-[#144554] mx-3">
+              عنوان التدوينة يعرض هنا بشكل كامل</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="mt-10 sm:mt-20">
+      <div
+        class="container mx-auto px-4 sm:px-4 md:py-0 md:px-4 lg:px-10 xl:px-16 mb-10"
+      >
+        <div></div>
+      </div>
+      <footer id="footer"></footer>
+      <div id="floatBtns"></div>
+    </main>
+    <script src="components/navbar/navbar.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="components/banner/banner.js"></script>
+    <script src="components/float-buttons/float-buttons.js"></script>
+    <script>
+      let currentPage = 1;
+      let itemsPerPage = 9;
+
+      function determineItemsPerPage() {
+        if (window.innerWidth <= 768) {
+          itemsPerPage = 5;
+        } else {
+          itemsPerPage = 9;
+        }
+      }
+
+      function setupPagination(grid) {
+        determineItemsPerPage();
+
+        const items = grid.children;
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        const paginationContainer = document.getElementById("pagination");
+        paginationContainer.innerHTML = "";
+
+        const prevButton = document.createElement("button");
+        prevButton.innerHTML = "&lt;&lt;";
+        prevButton.disabled = currentPage === 1;
+        prevButton.onclick = () => changePage(-1, grid);
+        paginationContainer.appendChild(prevButton);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const pageButton = document.createElement("button");
+          pageButton.innerHTML = i;
+          pageButton.className = `mx-1 px-3 py-1 ${
+            i === currentPage ? "border-2 border-sky-500" : "border-2"
+          }`;
+          pageButton.onclick = () => goToPage(i, grid);
+          paginationContainer.appendChild(pageButton);
+        }
+
+        const nextButton = document.createElement("button");
+        nextButton.innerHTML = "&gt;&gt;";
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.className = "text-lg border-2 px-2 mx-1";
+        prevButton.className = "text-lg border-2 px-2 mx-1";
+        nextButton.onclick = () => changePage(1, grid);
+        paginationContainer.appendChild(nextButton);
+      }
+
+      function goToPage(page, grid) {
+        currentPage = page;
+        displayPage(grid, currentPage);
+        setupPagination(grid);
+      }
+
+      function changePage(direction, grid) {
+        const totalPages = Math.ceil(grid.children.length / itemsPerPage);
+        if (direction === -1 && currentPage > 1) {
+          goToPage(currentPage - 1, grid);
+        } else if (direction === 1 && currentPage < totalPages) {
+          goToPage(currentPage + 1, grid);
+        }
+      }
+
+      function displayPage(grid, page) {
+        const items = grid.children;
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display =
+            i >= (page - 1) * itemsPerPage && i < page * itemsPerPage
+              ? "block"
+              : "none";
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        const grid = document.getElementById("grid");
+        if (grid) {
+          determineItemsPerPage();
+          goToPage(1, grid);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("grid");
+        if (grid) {
+          determineItemsPerPage();
+          displayPage(grid, currentPage);
+          setupPagination(grid);
+        }
+      });
+    </script>
+  </body>
+</html>
