@@ -181,7 +181,7 @@
           >
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -199,7 +199,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -217,7 +217,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -235,7 +235,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -253,7 +253,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -271,7 +271,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-1.png"
@@ -289,7 +289,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -307,7 +307,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -325,7 +325,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -343,7 +343,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -361,7 +361,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -379,7 +379,7 @@
             </a>
             <a
               href="blog-single-page.html"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              class="swiper-slide four flex flex-col items-start justify-start bg-white relative border border-[#C0C0C0] rounded-xl"
             >
               <img
                 src="./assets/images/blog-2.png"
@@ -556,7 +556,7 @@
         for (let i = 1; i <= totalPages; i++) {
           const pageButton = document.createElement("button");
           pageButton.innerHTML = i;
-          pageButton.className = `mx-1 px-3 py-1 ${
+          pageButton.className = `mx-1 px-3 py-1 bg-white ${
             i === currentPage ? "border-2 border-sky-500" : "border-2"
           }`;
           pageButton.onclick = () => goToPage(i, grid);
@@ -566,8 +566,8 @@
         const nextButton = document.createElement("button");
         nextButton.innerHTML = "&gt;&gt;";
         nextButton.disabled = currentPage === totalPages;
-        nextButton.className = "text-lg border-2 px-2 mx-1";
-        prevButton.className = "text-lg border-2 px-2 mx-1";
+        nextButton.className = "text-lg border-2 px-2 mx-1 bg-white";
+        prevButton.className = "text-lg border-2 px-2 mx-1 bg-white";
         nextButton.onclick = () => changePage(1, grid);
         paginationContainer.appendChild(nextButton);
       }
