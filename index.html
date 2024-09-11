@@ -61,7 +61,7 @@
               </a>
               <!-- Dropdown Menu -->
               <div
-                class="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white p-3 rounded shadow-lg space-y-2 w-28 transition-transform transform scale-y-0 group-hover:scale-y-100 duration-300 origin-top"
+                class="absolute origin-top scale-y-0 group-hover:scale-y-100 transform transition-transform duration-300 flex flex-col bg-white p-3 rounded shadow-lg space-y-2 w-28"
               >
                 <a
                   href="#"
@@ -113,7 +113,7 @@
         <!-- Mobile Menu -->
         <div
           id="mobile-menu"
-          class="fixed z-50 inset-0 transform translate-x-full transition-transform duration-300 flex flex-col space-y-4 pt-20 pr-10 text-black bg-white"
+          class="fixed z-[60] inset-0 transform translate-x-full transition-transform duration-300 flex flex-col space-y-4 pt-20 pr-10 text-black bg-white"
           style="
             background-image: url('/assets/images/mobile-navbar-bg.svg');
             background-size: cover;
@@ -170,57 +170,181 @@
         </div>
       </section>
       <!-- Group section -->
-      <section
-        class="Group container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 my-12"
-      >
-        <h2
-          class="text-3xl font-bold text-black text-center mb-12 md:text-start"
-        >
-          مجموعة اقسام
-        </h2>
-        <div
-          id="swiperContainer"
-          class="swiper-container relative overflow-hidden hidden"
-        >
-          <div class="swiper-wrapper pb-20"></div>
-          <div class="swiper-pagination pagination-1"></div>
-          <div class="swiper-button-prev button-prev-1"></div>
-          <div class="swiper-button-next button-next-1"></div>
+      <section class="Group">
+        <div class="container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 py-16">
+          <h2
+            class="text-3xl font-bold text-black text-center mb-12 md:text-start"
+          >
+            مجموعة اقسام
+          </h2>
+          <div
+            id="swiperContainer"
+            class="swiper-container relative overflow-hidden hidden"
+          >
+            <div class="swiper-wrapper pb-20"></div>
+            <div class="swiper-pagination pagination-1"></div>
+            <div class="swiper-button-prev button-prev-1"></div>
+            <div class="swiper-button-next button-next-1"></div>
+          </div>
+          <div
+            id="gridContainer"
+            class="grid grid-cols-4 grid-rows-3 gap-5 hidden"
+            style="direction: ltr"
+          ></div>
         </div>
-        <div
-          id="gridContainer"
-          class="grid grid-cols-4 grid-rows-3 gap-5 hidden"
-          style="direction: ltr"
-        ></div>
       </section>
       <!-- Category Name section -->
-      <section class="container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 my-12">
-        <h2
-          class="text-3xl font-bold text-black text-center mb-12 md:text-start"
-        >
-          إسم القسم
-        </h2>
-        <div class="swiper-container relative overflow-hidden tourism-swiper">
-          <div class="swiper-wrapper swiper-wrapper-2"></div>
-          <div class="swiper-pagination pagination-2"></div>
-          <div class="swiper-button-prev button-prev-2"></div>
-          <div class="swiper-button-next button-next-2"></div>
+      <section class="category-section">
+        <div class="container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 pb-16">
+          <h2
+            class="text-3xl font-bold text-black text-center mb-16 md:text-start"
+          >
+            إسم القسم
+          </h2>
+          <div class="swiper-container relative overflow-hidden tourism-swiper">
+            <div class="swiper-wrapper swiper-wrapper-2"></div>
+            <div class="swiper-pagination pagination-2"></div>
+            <div class="swiper-button-prev button-prev-2"></div>
+            <div class="swiper-button-next button-next-2"></div>
+          </div>
         </div>
       </section>
       <!-- Blog section -->
-      <section
-        class="blog-section container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 mb-0 md:mb-12 mt-12"
-      >
-        <h2
-          class="text-3xl font-bold text-black text-center mb-12 md:text-start"
-        >
-          المدونة
-        </h2>
-        <div class="swiper-container blog-swiper lg:hidden">
-          <div class="swiper-wrapper">
+      <section class="blog-section">
+        <div class="container mx-auto px-4 md:px-2 lg:px-10 xl:px-16 pb-16">
+          <h2
+            class="text-3xl font-bold text-black text-center mb-16 md:text-start"
+          >
+            المدونة
+          </h2>
+          <div class="swiper-container blog-swiper lg:hidden">
+            <div class="swiper-wrapper">
+              <a
+                href="#"
+                class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              >
+                <div class="relative w-full">
+                  <img
+                    src="./assets/images/blog-1.png"
+                    alt="blog-image"
+                    class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
+                  />
+                  <div
+                    class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
+                  >
+                    <i class="fas fa-link text-3xl text-white"></i>
+                    <h2 class="text-lg font-semibold text-white">
+                      إقرء المزيد
+                    </h2>
+                  </div>
+                </div>
+                <h3
+                  class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
+                >
+                  عنوان التدوينة يعرض هنا
+                </h3>
+                <p class="text-[#646464] w-full md:w-11/12">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في......
+                </p>
+                <div
+                  class="absolute inset-0 flex justify-center z-30 items-center"
+                >
+                  <button
+                    class="swiper-button-prev three rounded-full shadow mx-2"
+                  ></button>
+                  <button
+                    class="swiper-button-next three rounded-full shadow mx-2"
+                  ></button>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              >
+                <div class="relative w-full">
+                  <img
+                    src="./assets/images/blog-1.png"
+                    alt="blog-image"
+                    class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
+                  />
+                  <div
+                    class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
+                  >
+                    <i class="fas fa-link text-3xl text-white"></i>
+                    <h2 class="text-lg font-semibold text-white">
+                      إقرء المزيد
+                    </h2>
+                  </div>
+                </div>
+                <h3
+                  class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
+                >
+                  عنوان التدوينة يعرض هنا
+                </h3>
+                <p class="text-[#646464] w-full md:w-11/12">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في......
+                </p>
+                <div
+                  class="absolute z-30 inset-0 flex justify-center items-center"
+                >
+                  <button
+                    class="swiper-button-prev three rounded-full shadow mx-2"
+                  ></button>
+                  <button
+                    class="swiper-button-next three rounded-full shadow mx-2"
+                  ></button>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              >
+                <div class="relative w-full">
+                  <img
+                    src="./assets/images/blog-1.png"
+                    alt="blog-image"
+                    class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
+                  />
+                  <div
+                    class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
+                  >
+                    <i class="fas fa-link text-3xl text-white"></i>
+                    <h2 class="text-lg font-semibold text-white">
+                      إقرء المزيد
+                    </h2>
+                  </div>
+                </div>
+                <h3
+                  class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
+                >
+                  عنوان التدوينة يعرض هنا
+                </h3>
+                <p class="text-[#646464] w-full md:w-11/12">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في......
+                </p>
+                <div
+                  class="absolute z-30 inset-0 flex justify-center items-center"
+                >
+                  <button
+                    class="swiper-button-prev three rounded-full shadow mx-2"
+                  ></button>
+                  <button
+                    class="swiper-button-next three rounded-full shadow mx-2"
+                  ></button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hidden lg:grid grid-cols-1 gap-8 lg:grid-cols-3">
             <a
               href="#"
-              class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              class="col-span-1 relative group overflow-hidden rounded-lg"
             >
               <div class="relative w-full">
                 <img
@@ -240,25 +364,17 @@
               >
                 عنوان التدوينة يعرض هنا
               </h3>
-              <p class="text-[#646464] w-full md:w-11/12">
+              <p
+                class="text-[#646464] w-full md:w-11/12 transition duration-300"
+              >
                 هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
                 سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
                 الفقرات في......
               </p>
-              <div
-                class="absolute inset-0 flex justify-center z-30 items-center"
-              >
-                <button
-                  class="swiper-button-prev three rounded-full shadow mx-2"
-                ></button>
-                <button
-                  class="swiper-button-next three rounded-full shadow mx-2"
-                ></button>
-              </div>
             </a>
             <a
               href="#"
-              class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              class="col-span-1 relative group overflow-hidden rounded-lg"
             >
               <div class="relative w-full">
                 <img
@@ -278,25 +394,17 @@
               >
                 عنوان التدوينة يعرض هنا
               </h3>
-              <p class="text-[#646464] w-full md:w-11/12">
+              <p
+                class="text-[#646464] w-full md:w-11/12 transition duration-300"
+              >
                 هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
                 سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
                 الفقرات في......
               </p>
-              <div
-                class="absolute z-30 inset-0 flex justify-center items-center"
-              >
-                <button
-                  class="swiper-button-prev three rounded-full shadow mx-2"
-                ></button>
-                <button
-                  class="swiper-button-next three rounded-full shadow mx-2"
-                ></button>
-              </div>
             </a>
             <a
               href="#"
-              class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+              class="col-span-1 relative group overflow-hidden rounded-lg"
             >
               <div class="relative w-full">
                 <img
@@ -316,218 +424,186 @@
               >
                 عنوان التدوينة يعرض هنا
               </h3>
-              <p class="text-[#646464] w-full md:w-11/12">
+              <p
+                class="text-[#646464] w-full md:w-11/12 transition duration-300"
+              >
                 هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
                 سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
                 الفقرات في......
               </p>
-              <div
-                class="absolute z-30 inset-0 flex justify-center items-center"
-              >
-                <button
-                  class="swiper-button-prev three rounded-full shadow mx-2"
-                ></button>
-                <button
-                  class="swiper-button-next three rounded-full shadow mx-2"
-                ></button>
-              </div>
             </a>
           </div>
-        </div>
-        <div class="hidden lg:grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <a
-            href="#"
-            class="col-span-1 relative group overflow-hidden rounded-lg"
-          >
-            <div class="relative w-full">
-              <img
-                src="./assets/images/blog-1.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
-              />
-              <div
-                class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <i class="fas fa-link text-3xl text-white"></i>
-                <h2 class="text-lg font-semibold text-white">إقرء المزيد</h2>
-              </div>
-            </div>
-            <h3
-              class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
-            >
-              عنوان التدوينة يعرض هنا
-            </h3>
-            <p class="text-[#646464] w-full md:w-11/12 transition duration-300">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في......
-            </p>
-          </a>
-          <a
-            href="#"
-            class="col-span-1 relative group overflow-hidden rounded-lg"
-          >
-            <div class="relative w-full">
-              <img
-                src="./assets/images/blog-1.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
-              />
-              <div
-                class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <i class="fas fa-link text-3xl text-white"></i>
-                <h2 class="text-lg font-semibold text-white">إقرء المزيد</h2>
-              </div>
-            </div>
-            <h3
-              class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
-            >
-              عنوان التدوينة يعرض هنا
-            </h3>
-            <p class="text-[#646464] w-full md:w-11/12 transition duration-300">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في......
-            </p>
-          </a>
-          <a
-            href="#"
-            class="col-span-1 relative group overflow-hidden rounded-lg"
-          >
-            <div class="relative w-full">
-              <img
-                src="./assets/images/blog-1.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
-              />
-              <div
-                class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <i class="fas fa-link text-3xl text-white"></i>
-                <h2 class="text-lg font-semibold text-white">إقرء المزيد</h2>
-              </div>
-            </div>
-            <h3
-              class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
-            >
-              عنوان التدوينة يعرض هنا
-            </h3>
-            <p class="text-[#646464] w-full md:w-11/12 transition duration-300">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في......
-            </p>
-          </a>
         </div>
       </section>
       <!-- Banner Section -->
-      <section
-        class="banner-section container mx-auto sm:px-4 md:px-4 lg:px-10 xl:px-16 mt-0 md:mt-12 mb-12 py-5"
-      >
+      <section class="banner-section">
         <div
-          class="w-full h-[200px] sm:h-[250px] md:h-[300px] sm:rounded-xl bg-right bg-cover bg-no-repeat shadow-xl"
-          style="background-image: url('/assets/images/banner.png')"
-        ></div>
+          class="container mx-auto sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-20 md:pt-12 md:pb-16"
+        >
+          <img
+            src="./assets/images/banner.png"
+            alt="Banner"
+            class="w-full h-[200px] sm:h-[250px] md:h-[300px] sm:rounded-xl bg-cover bg-no-repeat shadow-xl object-cover object-right"
+          />
+        </div>
       </section>
       <!-- Flights section -->
-      <section
-        class="flights-section container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 my-12"
-      >
-        <h2
-          class="text-3xl font-bold text-black text-center mb-12 md:text-start"
+      <section class="flights-section">
+        <div
+          class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 py-8"
         >
-          رحلات داخليه
-        </h2>
-        <div class="swiper-container internal-trips-swiper">
-          <div class="swiper-wrapper four">
-            <a
-              href="#"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
-            >
-              <img
-                src="./assets/images/blog-1.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-t-xl"
-              />
-              <div class="p-4">
-                <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
-                <p class="text-[#646464] w-full md:w-11/12">
-                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
-                  الفقرات في......
-                </p>
-              </div>
-            </a>
-            <a
-              href="#"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
-            >
-              <img
-                src="./assets/images/image-2.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-t-xl"
-              />
-              <div class="p-4">
-                <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
-                <p class="text-[#646464] w-full md:w-11/12">
-                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
-                  الفقرات في......
-                </p>
-              </div>
-            </a>
-            <a
-              href="#"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
-            >
-              <img
-                src="./assets/images/blog-3.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-t-xl"
-              />
-              <div class="p-4">
-                <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
-                <p class="text-[#646464] w-full md:w-11/12">
-                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
-                  الفقرات في......
-                </p>
-              </div>
-            </a>
-            <a
-              href="#"
-              class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
-            >
-              <img
-                src="./assets/images/blog-2.png"
-                alt="blog-image"
-                class="object-cover w-full h-[250px] rounded-t-xl"
-              />
-              <div class="p-4">
-                <h3 class="text-2xl font-bold my-3">عنوان التدوينة يعرض هنا</h3>
-                <p class="text-[#646464] w-full md:w-11/12">
-                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
-                  الفقرات في......
-                </p>
-              </div>
-            </a>
+          <h2
+            class="text-3xl font-bold text-black text-center pb-20 md:text-start"
+          >
+            رحلات داخليه
+          </h2>
+          <div class="swiper-container internal-trips-swiper">
+            <div class="swiper-wrapper four">
+              <a
+                href="#"
+                class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              >
+                <img
+                  src="./assets/images/blog-1.png"
+                  alt="blog-image"
+                  class="object-cover w-full h-[250px] rounded-t-xl"
+                />
+                <div class="p-4">
+                  <h3 class="text-2xl font-bold my-3">
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p class="text-[#646464] w-full md:w-11/12">
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              >
+                <img
+                  src="./assets/images/image-2.png"
+                  alt="blog-image"
+                  class="object-cover w-full h-[250px] rounded-t-xl"
+                />
+                <div class="p-4">
+                  <h3 class="text-2xl font-bold my-3">
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p class="text-[#646464] w-full md:w-11/12">
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              >
+                <img
+                  src="./assets/images/blog-3.png"
+                  alt="blog-image"
+                  class="object-cover w-full h-[250px] rounded-t-xl"
+                />
+                <div class="p-4">
+                  <h3 class="text-2xl font-bold my-3">
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p class="text-[#646464] w-full md:w-11/12">
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="swiper-slide four flex flex-col items-start justify-start relative border border-[#C0C0C0] rounded-xl"
+              >
+                <img
+                  src="./assets/images/blog-2.png"
+                  alt="blog-image"
+                  class="object-cover w-full h-[250px] rounded-t-xl"
+                />
+                <div class="p-4">
+                  <h3 class="text-2xl font-bold my-3">
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p class="text-[#646464] w-full md:w-11/12">
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-pagination four"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
           </div>
-          <div class="swiper-pagination four"></div>
-          <div class="swiper-button-prev hidden md:flex"></div>
-          <div class="swiper-button-next hidden md:flex"></div>
         </div>
       </section>
       <!-- Items section -->
-      <section
-        class="items-section container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 my-12"
-      >
-        <div class="swiper-container swiper-5 md:hidden">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide five flex flex-col items-center text-center"
-            >
+      <section class="items-section">
+        <div
+          class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pt-4 pb-16"
+        >
+          <div class="swiper-container swiper-5 md:hidden">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide five flex flex-col items-center text-center"
+              >
+                <img src="./assets/images/activity.png" alt="item" />
+                <h2 class="text-xl font-bold my-3">اكثر من نشاط</h2>
+                <p class="text-[#646464]">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في
+                </p>
+              </div>
+              <div
+                class="swiper-slide five flex flex-col items-center text-center"
+              >
+                <img src="./assets/images/rate.png" alt="item" />
+                <h2 class="text-xl font-bold my-3">اعلى تقييمات</h2>
+                <p class="text-[#646464]">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في
+                </p>
+              </div>
+              <div
+                class="swiper-slide five flex flex-col items-center text-center"
+              >
+                <img src="./assets/images/support.png" alt="item" />
+                <h2 class="text-xl font-bold my-3">خدمة عملاء 24 ساعه</h2>
+                <p class="text-[#646464]">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في
+                </p>
+              </div>
+              <div
+                class="swiper-slide five flex flex-col items-center text-center"
+              >
+                <img src="./assets/images/shares.png" alt="item" />
+                <h2 class="text-xl font-bold my-3">
+                  اعلى مشاراكات فى الوطن العربي
+                </h2>
+                <p class="text-[#646464]">
+                  هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                  الفقرات في
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="hidden md:grid lg:grid-cols-4 md:grid-cols-2 gap-5 py-10">
+            <div class="col-span-1 flex flex-col items-start">
               <img src="./assets/images/activity.png" alt="item" />
               <h2 class="text-xl font-bold my-3">اكثر من نشاط</h2>
               <p class="text-[#646464]">
@@ -536,9 +612,7 @@
                 الفقرات في
               </p>
             </div>
-            <div
-              class="swiper-slide five flex flex-col items-center text-center"
-            >
+            <div class="col-span-1 flex flex-col items-start">
               <img src="./assets/images/rate.png" alt="item" />
               <h2 class="text-xl font-bold my-3">اعلى تقييمات</h2>
               <p class="text-[#646464]">
@@ -547,9 +621,7 @@
                 الفقرات في
               </p>
             </div>
-            <div
-              class="swiper-slide five flex flex-col items-center text-center"
-            >
+            <div class="col-span-1 flex flex-col items-start">
               <img src="./assets/images/support.png" alt="item" />
               <h2 class="text-xl font-bold my-3">خدمة عملاء 24 ساعه</h2>
               <p class="text-[#646464]">
@@ -558,9 +630,7 @@
                 الفقرات في
               </p>
             </div>
-            <div
-              class="swiper-slide five flex flex-col items-center text-center"
-            >
+            <div class="col-span-1 flex flex-col items-start">
               <img src="./assets/images/shares.png" alt="item" />
               <h2 class="text-xl font-bold my-3">
                 اعلى مشاراكات فى الوطن العربي
@@ -572,54 +642,13 @@
               </p>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="hidden md:grid lg:grid-cols-4 md:grid-cols-2 gap-5 py-10">
-          <div class="col-span-1 flex flex-col items-start">
-            <img src="./assets/images/activity.png" alt="item" />
-            <h2 class="text-xl font-bold my-3">اكثر من نشاط</h2>
-            <p class="text-[#646464]">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في
-            </p>
-          </div>
-          <div class="col-span-1 flex flex-col items-start">
-            <img src="./assets/images/rate.png" alt="item" />
-            <h2 class="text-xl font-bold my-3">اعلى تقييمات</h2>
-            <p class="text-[#646464]">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في
-            </p>
-          </div>
-          <div class="col-span-1 flex flex-col items-start">
-            <img src="./assets/images/support.png" alt="item" />
-            <h2 class="text-xl font-bold my-3">خدمة عملاء 24 ساعه</h2>
-            <p class="text-[#646464]">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في
-            </p>
-          </div>
-          <div class="col-span-1 flex flex-col items-start">
-            <img src="./assets/images/shares.png" alt="item" />
-            <h2 class="text-xl font-bold my-3">
-              اعلى مشاراكات فى الوطن العربي
-            </h2>
-            <p class="text-[#646464]">
-              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
-              سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
-              في
-            </p>
-          </div>
         </div>
       </section>
       <!-- Footer -->
       <footer>
         <div
           class="w-full h-[60vh] md:h-[45vh] bg-center bg-cover bg-no-repeat flex items-center justify-center"
-          style="background-image: url('/assets/images/footer-bg.png')"
+          style="background-image: url('./assets/images/footer-bg.png')"
         >
           <div class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16">
             <div class="text-center">
