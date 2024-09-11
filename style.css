@@ -124,9 +124,28 @@
   position: absolute;
   content: "";
   z-index: -1;
-  left: 0;
-  top: 10px;
-  width: 100%;
+  left: 50%;
+  top: 25px;
+  width: 50%;
+  transform: translate(-50%, -50%);
   height: 32px;
   background: #4ccaf2;
+}
+
+@media (min-width: 560px) {
+  .main-title::after {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-title::after {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title::after {
+    width: 15%;
+  }
 }

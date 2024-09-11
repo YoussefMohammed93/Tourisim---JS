@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const navLinks = [
         { href: "index.html", text: "الرئيسية" },
         { href: "#", text: "انشطة سياحية" },
-        { href: "#", text: "المدونات", hasDropdown: true },
+        { href: "blogs.html", text: "المدونات", hasDropdown: true },
         { href: "#", text: "مرافق الفنادق" },
         { href: "images.html", text: "الصور" },
         { href: "#", text: "قسم جديد" },

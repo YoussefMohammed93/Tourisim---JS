@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tourism - Contact</title>
+  </head>
+  <body>
+    <nav id="navbar" class="w-full absolute z-50"></nav>
+    <header id="header"></header>
+    <main class="mt-10 sm:mt-20">
+      <div
+        class="container mx-auto px-4 sm:px-4 md:py-0 md:px-4 lg:px-10 xl:px-16 mb-10"
+      >
+        <div
+          id="grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+        >
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+          <a
+            href="blog-sub-section.html"
+            class="flex flex-col items-start p-5 rounded-xl border border-[#4CCAF2]"
+          >
+            <img
+              src="./assets/icon.png"
+              alt=""
+              class="bg-[#4CCAF2] p-3 rounded-full"
+            />
+            <h2 class="text-xl font-bold my-3">إسم المدونة</h2>
+            <p>
+              هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+              سيلهي القارئ عن التركيز
+            </p>
+          </a>
+        </div>
+        <div
+          id="pagination"
+          class="flex justify-center space-x-2 mt-4 md:hidden"
+        ></div>
+      </div>
+      <footer id="footer"></footer>
+      <div id="floatBtns"></div>
+    </main>
+    <script src="components/navbar/navbar.js"></script>
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="components/float-buttons/float-buttons.js"></script>
+    <script>
+      let currentPage = 1;
+      const itemsPerPage = window.innerWidth < 768 ? 4 : null;
+
+      function setupPagination(grid) {
+        if (itemsPerPage === null) {
+          Array.from(grid.children).forEach(
+            (item) => (item.style.display = "block")
+          );
+          document.getElementById("pagination").classList.add("hidden");
+          return;
+        }
+
+        const items = grid.children;
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        const paginationContainer = document.getElementById("pagination");
+        paginationContainer.innerHTML = "";
+
+        const prevButton = document.createElement("button");
+        prevButton.innerHTML = "&lt;&lt;";
+        prevButton.disabled = currentPage === 1;
+        prevButton.onclick = () => changePage(-1, grid);
+        paginationContainer.appendChild(prevButton);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const pageButton = document.createElement("button");
+          pageButton.innerHTML = i;
+          pageButton.className = `mx-1 px-3 py-1 ${
+            i === currentPage ? "border-2 border-sky-500" : "border-2"
+          }`;
+          pageButton.onclick = () => goToPage(i, grid);
+          paginationContainer.appendChild(pageButton);
+        }
+
+        const nextButton = document.createElement("button");
+        nextButton.innerHTML = "&gt;&gt;";
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.className = "text-lg border-2 px-2 mx-1";
+        prevButton.className = "text-lg border-2 px-2 mx-1";
+        nextButton.onclick = () => changePage(1, grid);
+        paginationContainer.appendChild(nextButton);
+      }
+
+      function goToPage(page, grid) {
+        currentPage = page;
+        displayPage(grid, currentPage);
+        setupPagination(grid);
+      }
+
+      function changePage(direction, grid) {
+        const totalPages = Math.ceil(grid.children.length / itemsPerPage);
+        if (direction === -1 && currentPage > 1) {
+          goToPage(currentPage - 1, grid);
+        } else if (direction === 1 && currentPage < totalPages) {
+          goToPage(currentPage + 1, grid);
+        }
+      }
+
+      function displayPage(grid, page) {
+        const items = grid.children;
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display =
+            i >= (page - 1) * itemsPerPage && i < page * itemsPerPage
+              ? "block"
+              : "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("grid");
+        if (grid) {
+          if (itemsPerPage !== null) {
+            displayPage(grid, currentPage);
+            setupPagination(grid);
+          } else {
+            setupPagination(grid);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
