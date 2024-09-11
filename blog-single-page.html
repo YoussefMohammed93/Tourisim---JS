@@ -276,12 +276,12 @@
                     </p>
                   </div>
                   <div
-                    class="flex pt-16 md:pt-20 w-full items-center justify-center"
+                    class="relative flex mt-16 md:mt-20 items-center justify-center"
                   >
                     <p
-                      class="text-center md:w-3/4 bg-white shadow-lg p-4 rounded-2xl font-semibold"
+                      class="text-center md:w-3/4 bg-white shadow-md p-8 rounded-2xl border font-semibold"
                     >
-                      <i class="fa-solid fa-quote-left fa-xl m-2"></i>
+                      <i class="fa-solid fa-quote-left fa-xl absolute top-5"></i>
                       هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
                       ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
                       توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام
@@ -290,7 +290,7 @@
                       محتوى نصي" فتجعلها تبدو إيبسوم لأنها تعطي توزيعاَ طبيعياَ
                       -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي،
                       هنا يوجد محتوى نصي" فتجعلها تبدو
-                      <i class="fa-solid fa-quote-left fa-xl m-2"></i>
+                      <i class="fa-solid fa-quote-left fa-xl absolute left-[10%] md:left-[17.5%] xl:left-[15%] bottom-5"></i>
                     </p>
                   </div>
                   <div
@@ -331,7 +331,7 @@
             <!-- Comments -->
             <section class="comments pt-16">
               <div
-                class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-16"
+                class="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-4"
               >
                 <div class="flex justify-center md:hidden">
                   <div
@@ -389,8 +389,11 @@
                     </div>
                   </div>
                 </div>
+                <div class="hidden md:block pt-12">
+                  <h1 class="text-2xl font-bold">اترك تعليقا</h1>
+                </div>
                 <div id="content2" class="tab-content mt-10 hidden md:block">
-                  <div class="md:shadow md:p-6 md:rounded-xl bg-white">
+                  <div class="md:shadow md:p-7 md:rounded-xl bg-white">
                     <form action="#">
                       <div class="flex flex-col space-y-4">
                         <label for="name" class="text-xl font-semibold"
