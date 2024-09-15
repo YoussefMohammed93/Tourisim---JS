@@ -1,5 +1,9 @@
-/* Cairo font */
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@font-face {
+  font-family: "Expo Arabic";
+  src: url("./fonts/ExpoArabic-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -7,7 +11,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   direction: rtl; /* Arabic language */
-  font-family: "Cairo", sans-serif;
+  font-family: "Expo Arabic", sans-serif;
 }
 
 .swiper-wrapper {
@@ -15,20 +19,17 @@
 }
 
 .swiper-wrapper.group {
-  padding-bottom: 20px !important;
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination.one {
+  bottom: -5px;
 }
 
 @media (min-width: 768px) {
   .swiper-wrapper {
     padding-bottom: 0 !important;
   }
-}
-
-.swiper-slide {
-  height: 385px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .swiper-container {
