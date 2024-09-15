@@ -10,7 +10,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Tourism - Blogs</title>
@@ -313,19 +314,18 @@
         </div>
       </section>
       <!-- Simillar Blogs section -->
-      <section class="simillar-blogs">
+      <section class="simillar-section hidden md:block">
         <div class="container">
-          <div class="wrapper px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 py-16">
+          <div class="wrapper px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-16">
             <h2
               class="text-3xl font-bold text-black text-center pb-8 md:text-start"
             >
               تدوينات مشابهه
             </h2>
-            <div class="swiper-container internal-trips-swiper">
-              <div class="swiper-wrapper four overflow-hidden">
-                <!-- Card 1 -->
+            <div class="flights-carousel">
+              <div class="slick-slide md:mx-2.5">
                 <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
                 >
                   <a href="#" class="w-full">
                     <img
@@ -345,119 +345,92 @@
                     >
                       هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
                       ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/image-2.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-3.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-2.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-2xl"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-2.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination four"></div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -557,7 +530,12 @@
         </div>
       </div>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="/assets/js/main.js"></script>
     <script>
       document
         .getElementById("menu-button")
@@ -656,31 +634,6 @@
             setupPagination(grid);
           }
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const internalTripsSwiper = new Swiper(".internal-trips-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          pagination: {
-            el: ".swiper-pagination.four",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          },
-        });
       });
     </script>
   </body>

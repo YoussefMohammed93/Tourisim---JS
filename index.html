@@ -8,11 +8,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Tourism - Home</title>
   </head>
   <body>
@@ -204,72 +205,67 @@
             >
               مجموعة اقسام
             </h2>
-            <div class="swiper swiperOne block md:hidden">
-              <div class="swiper-wrapper pb-20 group">
-                <div class="swiper-slide">
-                  <a
-                    href="#"
-                    class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src="./assets/images/image1.png"
-                      alt="عنوان القسم"
-                      class="w-full h-full object-cover rounded-xl"
-                    />
-                    <div class="absolute bottom-3 right-3 z-20">
-                      <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="#"
-                    class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src="./assets/images/image1.png"
-                      alt="عنوان القسم"
-                      class="w-full h-full object-cover rounded-xl"
-                    />
-                    <div class="absolute bottom-3 right-3 z-20">
-                      <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="#"
-                    class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src="./assets/images/image1.png"
-                      alt="عنوان القسم"
-                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 rounded-xl"
-                    />
-                    <div class="absolute bottom-3 right-3 z-20">
-                      <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="#"
-                    class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src="./assets/images/image1.png"
-                      alt="عنوان القسم"
-                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 rounded-xl"
-                    />
-                    <div class="absolute bottom-3 right-3 z-20">
-                      <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
-                    </div>
-                  </a>
-                </div>
+            <div class="group-carousel block md:hidden">
+              <div class="slide">
+                <a
+                  href="#"
+                  class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
+                >
+                  <img
+                    src="./assets/images/image1.png"
+                    alt="عنوان القسم"
+                    class="w-full h-full object-cover rounded-xl"
+                  />
+                  <div class="absolute bottom-3 right-3 z-20">
+                    <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
+                  </div>
+                </a>
               </div>
-              <div class="swiper-pagination swiper-pagination-one"></div>
-              <div class="swiper-button-prev swiper-button-prev-one"></div>
-              <div class="swiper-button-next swiper-button-next-one"></div>
+              <div class="slide">
+                <a
+                  href="#"
+                  class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
+                >
+                  <img
+                    src="./assets/images/image1.png"
+                    alt="عنوان القسم"
+                    class="w-full h-full object-cover rounded-xl"
+                  />
+                  <div class="absolute bottom-3 right-3 z-20">
+                    <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="slide">
+                <a
+                  href="#"
+                  class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
+                >
+                  <img
+                    src="./assets/images/image1.png"
+                    alt="عنوان القسم"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 rounded-xl"
+                  />
+                  <div class="absolute bottom-3 right-3 z-20">
+                    <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="slide">
+                <a
+                  href="#"
+                  class="relative gradient-overlay block w-full h-64 overflow-hidden rounded-xl"
+                >
+                  <img
+                    src="./assets/images/image1.png"
+                    alt="عنوان القسم"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 rounded-xl"
+                  />
+                  <div class="absolute bottom-3 right-3 z-20">
+                    <h3 class="text-2xl font-bold text-white">عنوان القسم</h3>
+                  </div>
+                </a>
+              </div>
             </div>
             <div
               class="grid-container hidden md:grid grid-cols-4 grid-rows-3 gap-6"
@@ -380,101 +376,75 @@
             >
               إسم القسم
             </h2>
-            <div
-              class="swiper-container swiper tourism-swiper relative overflow-hidden"
-            >
-              <div class="swiper-wrapper">
-                <div
-                  class="swiper-slide relative gradient-overlay w-[300px] h-[300px] flex-none group overflow-hidden rounded-xl"
+            <div class="tourism relative">
+              <div
+                class="slide md:mx-2.5 relative gradient-overlay h-[250px] flex-none group overflow-hidden rounded-xl"
+              >
+                <a href="#" class="absolute inset-0">
+                  <img
+                    src="./assets/images/image-1.png"
+                    alt="عنوان التدوينة يعرض هنا"
+                    class="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-110 rounded-xl"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
                 >
-                  <a href="#" class="absolute inset-0">
-                    <img
-                      src="./assets/images/image-1.png"
-                      alt="عنوان التدوينة يعرض هنا"
-                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </a>
-                </div>
-                <div
-                  class="swiper-slide relative gradient-overlay w-[300px] h-[300px] flex-none group overflow-hidden rounded-xl"
-                >
-                  <a href="#" class="absolute inset-0">
-                    <img
-                      src="./assets/images/image-2.png"
-                      alt="عنوان التدوينة يعرض هنا"
-                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </a>
-                </div>
-                <div
-                  class="swiper-slide relative gradient-overlay w-[300px] h-[300px] flex-none group overflow-hidden rounded-xl"
-                >
-                  <a href="#" class="absolute inset-0">
-                    <img
-                      src="./assets/images/image6.png"
-                      alt="عنوان التدوينة يعرض هنا"
-                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </a>
-                </div>
-                <div
-                  class="swiper-slide relative gradient-overlay w-[300px] h-[300px] flex-none group overflow-hidden rounded-xl"
-                >
-                  <a href="#" class="absolute inset-0">
-                    <img
-                      src="./assets/images/image-1.png"
-                      alt="عنوان التدوينة يعرض هنا"
-                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </a>
-                </div>
-                <div
-                  class="swiper-slide relative gradient-overlay w-[300px] h-[300px] flex-none group overflow-hidden rounded-xl"
-                >
-                  <a href="#" class="absolute inset-0">
-                    <img
-                      src="./assets/images/blog-3.png"
-                      alt="عنوان التدوينة يعرض هنا"
-                      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </a>
-                </div>
+                  عنوان التدوينة يعرض هنا
+                </a>
               </div>
               <div
-                class="swiper-pagination swiper-pagination-two md:hidden"
-              ></div>
-              <div class="swiper-button-prev swiper-button-prev-two"></div>
-              <div class="swiper-button-next swiper-button-next-two"></div>
+                class="slide md:mx-2.5 relative gradient-overlay h-[250px] flex-none group overflow-hidden rounded-xl"
+              >
+                <a href="#" class="absolute inset-0">
+                  <img
+                    src="./assets/images/blog-1.png"
+                    alt="عنوان التدوينة يعرض هنا"
+                    class="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-110 rounded-xl"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
+                >
+                  عنوان التدوينة يعرض هنا
+                </a>
+              </div>
+              <div
+                class="slide md:mx-2.5 relative gradient-overlay h-[250px] flex-none group overflow-hidden rounded-xl"
+              >
+                <a href="#" class="absolute inset-0">
+                  <img
+                    src="./assets/images/blog-2.png"
+                    alt="عنوان التدوينة يعرض هنا"
+                    class="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-110 rounded-xl"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
+                >
+                  عنوان التدوينة يعرض هنا
+                </a>
+              </div>
+              <div
+                class="slide md:mx-2.5 relative gradient-overlay h-[250px] flex-none group overflow-hidden rounded-xl"
+              >
+                <a href="#" class="absolute inset-0">
+                  <img
+                    src="./assets/images/image-2.png"
+                    alt="عنوان التدوينة يعرض هنا"
+                    class="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-110 rounded-xl"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="absolute z-30 bottom-5 right-5 text-white text-xl font-bold"
+                >
+                  عنوان التدوينة يعرض هنا
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -488,11 +458,11 @@
             >
               المدونة
             </h2>
-            <div class="swiper-container swiper blog-swiper lg:hidden">
-              <div class="swiper-wrapper">
+            <div class="blog-carousel lg:hidden">
+              <div class="slick-slide">
                 <a
                   href="#"
-                  class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+                  class="flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
                 >
                   <div class="relative w-full rounded-lg overflow-hidden">
                     <img
@@ -521,99 +491,76 @@
                     ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
                     توضع الفقرات في......
                   </p>
-                  <div
-                    class="absolute inset-0 flex justify-center z-30 items-center"
-                  >
-                    <button
-                      class="swiper-button-prev three rounded-full shadow mx-2"
-                    ></button>
-                    <button
-                      class="swiper-button-next three rounded-full shadow mx-2"
-                    ></button>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
-                >
-                  <div class="relative w-full rounded-lg overflow-hidden">
-                    <img
-                      src="./assets/images/blog-1.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
-                    />
-                    <div
-                      class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
-                    >
-                      <i class="fas fa-link text-3xl text-white"></i>
-                      <h2 class="text-lg font-semibold text-white">
-                        إقرء المزيد
-                      </h2>
-                    </div>
-                  </div>
-                  <h3
-                    class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </h3>
-                  <p class="text-[#646464] w-full md:w-11/12">
-                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    توضع الفقرات في......
-                  </p>
-                  <div
-                    class="absolute z-30 inset-0 flex justify-center items-center"
-                  >
-                    <button
-                      class="swiper-button-prev three rounded-full shadow mx-2"
-                    ></button>
-                    <button
-                      class="swiper-button-next three rounded-full shadow mx-2"
-                    ></button>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  class="swiper-slide flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
-                >
-                  <div class="relative w-full rounded-lg overflow-hidden">
-                    <img
-                      src="./assets/images/blog-1.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
-                    />
-                    <div
-                      class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
-                    >
-                      <i class="fas fa-link text-3xl text-white"></i>
-                      <h2 class="text-lg font-semibold text-white">
-                        إقرء المزيد
-                      </h2>
-                    </div>
-                  </div>
-                  <h3
-                    class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
-                  >
-                    عنوان التدوينة يعرض هنا
-                  </h3>
-                  <p class="text-[#646464] w-full md:w-11/12">
-                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    توضع الفقرات في......
-                  </p>
-                  <div
-                    class="absolute z-30 inset-0 flex justify-center items-center"
-                  >
-                    <button
-                      class="swiper-button-prev three rounded-full shadow mx-2"
-                    ></button>
-                    <button
-                      class="swiper-button-next three rounded-full shadow mx-2"
-                    ></button>
-                  </div>
                 </a>
               </div>
-              <div class="swiper-pagination swiper-pagination-five"></div>
+              <div class="slick-slide">
+                <a
+                  href="#"
+                  class="flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+                >
+                  <div class="relative w-full rounded-lg overflow-hidden">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
+                    />
+                    <div
+                      class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
+                    >
+                      <i class="fas fa-link text-3xl text-white"></i>
+                      <h2 class="text-lg font-semibold text-white">
+                        إقرء المزيد
+                      </h2>
+                    </div>
+                  </div>
+                  <h3
+                    class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
+                  >
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p
+                    class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                  >
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </a>
+              </div>
+              <div class="slick-slide">
+                <a
+                  href="#"
+                  class="flex flex-col items-start justify-start relative z-20 group overflow-hidden rounded-lg"
+                >
+                  <div class="relative w-full rounded-lg overflow-hidden">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-lg transition duration-300 group-hover:opacity-50"
+                    />
+                    <div
+                      class="absolute inset-0 flex justify-center items-center flex-col bg-blue-500 bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300"
+                    >
+                      <i class="fas fa-link text-3xl text-white"></i>
+                      <h2 class="text-lg font-semibold text-white">
+                        إقرء المزيد
+                      </h2>
+                    </div>
+                  </div>
+                  <h3
+                    class="text-2xl font-bold my-3 transition duration-300 group-hover:text-[#4CCAF2]"
+                  >
+                    عنوان التدوينة يعرض هنا
+                  </h3>
+                  <p
+                    class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                  >
+                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                    ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                    توضع الفقرات في......
+                  </p>
+                </a>
+              </div>
             </div>
             <div class="hidden lg:grid grid-cols-1 gap-8 lg:grid-cols-3">
               <a
@@ -720,7 +667,7 @@
       <section class="banner-section">
         <div class="container">
           <div
-            class="wrapper sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-20 md:pt-12 md:pb-16"
+            class="wrapper sm:px-4 md:px-4 lg:px-10 xl:px-16 pb-20 pt-12 md:pb-24"
           >
             <img
               src="./assets/images/banner.png"
@@ -739,10 +686,10 @@
             >
               رحلات داخليه
             </h2>
-            <div class="swiper-container swiper internalSwiper">
-              <div class="swiper-wrapper four overflow-hidden">
+            <div class="flights-carousel">
+              <div class="slick-slide md:mx-2.5">
                 <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
                 >
                   <a href="#" class="w-full">
                     <img
@@ -762,101 +709,92 @@
                     >
                       هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
                       ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-2.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-3.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide four flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
-                >
-                  <a href="#" class="w-full">
-                    <img
-                      src="./assets/images/blog-3.png"
-                      alt="blog-image"
-                      class="object-cover w-full h-[250px] rounded-t-xl"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <a href="#">
-                      <h3 class="text-2xl font-bold my-3">
-                        عنوان التدوينة يعرض هنا
-                      </h3>
-                    </a>
-                    <p
-                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
-                    >
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
-                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
-                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-pagination-three"></div>
-              <div class="swiper-button-prev swiper-button-prev-three"></div>
-              <div class="swiper-button-next swiper-button-next-three"></div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slick-slide md:mx-2.5">
+                <div
+                  class="flex flex-col items-start justify-start relative bg-white border border-[#C0C0C0] rounded-xl min-h-[calc(100% + 20px)] transition-shadow duration-300 ease-in-out hover:shadow-lg"
+                >
+                  <a href="#" class="w-full">
+                    <img
+                      src="./assets/images/blog-1.png"
+                      alt="blog-image"
+                      class="object-cover w-full h-[250px] rounded-t-xl"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <a href="#">
+                      <h3 class="text-2xl font-bold my-3">
+                        عنوان التدوينة يعرض هنا
+                      </h3>
+                    </a>
+                    <p
+                      class="text-[#646464] w-full md:w-11/12 text-base max-h-[72px] overflow-hidden"
+                    >
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في......
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -865,13 +803,11 @@
       <section class="items-section">
         <div class="container">
           <div
-            class="wrapper px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pt-4 pb-8 md:pb-16"
+            class="wrapper px-4 sm:px-4 md:px-4 lg:px-10 xl:px-16 pt-4 md:pt-10 pb-8 md:pb-16"
           >
-            <div class="swiper-container swiper swiperItems md:hidden">
-              <div class="swiper-wrapper pb-5">
-                <div
-                  class="swiper-slide five flex flex-col items-center text-center"
-                >
+            <div class="items-carousel md:hidden py-10">
+              <div class="slick-slide">
+                <div class="flex flex-col items-center text-center">
                   <img src="./assets/images/activity.png" alt="item" />
                   <h2 class="text-xl font-bold my-3">اكثر من نشاط</h2>
                   <p
@@ -882,9 +818,9 @@
                     توضع الفقرات في
                   </p>
                 </div>
-                <div
-                  class="swiper-slide five flex flex-col items-center text-center"
-                >
+              </div>
+              <div class="slick-slide">
+                <div class="flex flex-col items-center text-center">
                   <img src="./assets/images/rate.png" alt="item" />
                   <h2 class="text-xl font-bold my-3">اعلى تقييمات</h2>
                   <p
@@ -895,9 +831,9 @@
                     توضع الفقرات في
                   </p>
                 </div>
-                <div
-                  class="swiper-slide five flex flex-col items-center text-center"
-                >
+              </div>
+              <div class="slick-slide">
+                <div class="flex flex-col items-center text-center">
                   <img src="./assets/images/support.png" alt="item" />
                   <h2 class="text-xl font-bold my-3">خدمة عملاء 24 ساعه</h2>
                   <p
@@ -908,9 +844,9 @@
                     توضع الفقرات في
                   </p>
                 </div>
-                <div
-                  class="swiper-slide five flex flex-col items-center text-center"
-                >
+              </div>
+              <div class="slick-slide">
+                <div class="flex flex-col items-center text-center">
                   <img src="./assets/images/shares.png" alt="item" />
                   <h2 class="text-xl font-bold my-3">
                     اعلى مشاراكات فى الوطن العربي
@@ -924,7 +860,6 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-pagination-four"></div>
             </div>
             <div
               class="hidden md:grid lg:grid-cols-4 md:grid-cols-2 gap-5 py-10"
@@ -1056,112 +991,11 @@
         </div>
       </div>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      type="text/javascript"
+    ></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      var swiperOne = new Swiper(".swiperOne", {
-        navigation: {
-          nextEl: ".swiper-button-next-one",
-          prevEl: ".swiper-button-prev-one",
-        },
-        pagination: {
-          el: ".swiper-pagination-one",
-          clickable: true,
-        },
-      });
-
-      var tourismSwiper = new Swiper(".tourism-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination-two",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next-two",
-          prevEl: ".swiper-button-prev-two",
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      });
-
-      var internalTripsSwiper = new Swiper(".internalSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        direction: "horizontal",
-        pagination: {
-          el: ".swiper-pagination-three",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next-three",
-          prevEl: ".swiper-button-prev-three",
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        },
-      });
-
-      // Initialize Swiper Items
-      var swiperItems = new Swiper(".swiperItems", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination-four",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next-four",
-          prevEl: ".swiper-button-prev-four",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        },
-      });
-
-      var blogSwiper = new Swiper(".blog-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination-five",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next-five",
-          prevEl: ".swiper-button-prev-five",
-        },
-        breakpoints: {
-          1024: {
-            enabled: false,
-          },
-        },
-      });
-    </script>
   </body>
 </html>
