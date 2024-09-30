@@ -2,8 +2,7 @@
   "name": "my-project",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css",
-    "start": "live-server"
+    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css"
   },
   "dependencies": {
     "jquery": "^3.7.1",
