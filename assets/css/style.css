@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Expo Arabic";
   src: url("./fonts/ExpoArabic-Book.ttf") format("truetype");
@@ -216,5 +220,11 @@ button.slick-prev.slick-arrow {
   button.slick-next.slick-arrow,
   button.slick-prev.slick-arrow {
     display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-single-page {
+    background-image: url("/assets/images/hero-section-bg.png");
   }
 }
