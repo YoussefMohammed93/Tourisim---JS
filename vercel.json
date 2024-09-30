@@ -1,5 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "assets/css/tailwind.css", "use": "@vercel/static" },
+    { "src": "assets/js/main.js", "use": "@vercel/static" }
+  ],
   "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
 }
